@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# == Line Wrapping Reference (block wise) =========================================================================\120
+
 """project_template.py:    A template for python (3) projects.
 
 The Zen of Python, by Tim Peters:
@@ -28,7 +30,7 @@ Personal Zen Additions, by ErnestoHoro (git):
 
 Follow the code style of the given project - if anyhow reasonable.
 Use comment section blocks with a length of 120 chars to structure blocks of code.
-Wrap lines at 120 chars of the current block with a total maximum of 160 chars.
+Wrap code and docstring lines at 120 chars of the current block with a total maximum of 160 chars.
 Without indentation wrap lines at 120 chars.
 Use linebreaks only for major logical or complex blocks.
 At indentation steps extra linebreaks are omitted.
@@ -38,7 +40,7 @@ Avoid other styles like "import <lib>".
 Use single quotes by default, except for docstrings because there they might represent actual spoken language.
 Stick to an OOP style.
 Avoid any more complexity than basic instantiation, argument parsing, logging- or gui-initialization at "if __name__ ==
-'__main__':".
+ '__main__':".
 Don't put another useless main().
 Always use the r (raw) prefix for file paths under windows, instead of manual escape.
 Use os.linesep if appropriate.
@@ -65,18 +67,24 @@ import sys
 
 
 class ExampleClass:
-    """This line should be used already.
+    """
     This is a Section Title
     =======================
+    Lorem Ipsum.
 
     This is a Subsection Title
     --------------------------
-    This paragraph is in the subsection.
+    Lorem Ipsum.
     """
-
     def __init__(self):
         """OneLine DocString."""
+        # =================================================================================================================\120
+        #  Section (major)
+        # =====================================================================================================================
         self.hello_world = 'Hello World!'
+        # ---------------------------------------------------------------------------------------------------------------------
+        #  Section (minor)
+        # ---------------------------------------------------------------------------------------------------------------------
         self.cwd = os.path.getctime(r'C:\Windows\system32.dll')
 
     def print_hello(self):
@@ -90,6 +98,9 @@ class ExampleClass:
 
 
 if __name__ == '__main__':
+    # =================================================================================================================\120
+    #  Section (major)
+    # =====================================================================================================================
     example = ExampleClass()  # inline comments, placed after two spaces, are not real sentences (just hints)
     example.print_hello()  # Todo: This should be a real sentence, since it is a work instruction!
 
