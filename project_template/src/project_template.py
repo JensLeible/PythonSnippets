@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# == Line Wrapping Reference (block wise) =========================================================================\120
-
-"""project_template.py:    A template for python (3) projects.
+"""project_template.py: A template for python projects.
 
 The Zen of Python, by Tim Peters:
-
+=================================
 Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
@@ -27,31 +25,27 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 
-Personal Zen Additions, by ErnestoHoro (git):
-
-Follow the code style of the given project - if anyhow reasonable.
-Use comment section blocks with a length of 120 chars to structure blocks of code.
-Wrap code and docstring lines at 120 chars of the current block with a total maximum of 160 chars.
-Without indentation wrap lines at 120 chars.
-Use linebreaks only for major logical or complex blocks.
+Personal Suggestions:
+=====================
 At indentation steps extra linebreaks are omitted.
+Avoid any complexity at "if __name__ == '__main__':".
+Avoid other styles like "import <lib>".
+Default shebang is #!/usr/bin/env python.
+Follow the code style of the given project - if it's worth it.
 If explicit is too ugly, implicit is better.
 If flat is too ugly, nested is better.
-Avoid other styles like "import <lib>".
-Use single quotes by default, except for docstrings because there they might represent actual spoken language.
-Stick to an OOP style.
-Avoid any more complexity than basic instantiation, argument parsing, logging- or gui-initialization at "if __name__ ==
- '__main__':".
-Don't put another useless main().
-Always use the r (raw) prefix for file paths under windows, instead of manual escape.
+Line wrapping after 120 columns.
+Name your files *.py independent of your os-environment.
+Put a class specific main() - if appropriate.
+Use braces at ('').join(list).
+Use forward slashes for file paths.
+Use linebreaks only for major logical or complex blocks.
 Use os.linesep if appropriate.
 Use regex, if appropriate, instead of stacked (e.g.) replace or strip.
-Use braces at ('').join(list).
-Put #!/usr/bin/env python on top.
-Name your files *.py independent of your os-environment.
-Encode your application files (!) by default in UTF-8.
-Use x.y.z (major, minor, build) scheme for versioning.
-Explain the basics of individual code formatting in the 1st docstring section.
+Use single quotes by default.
+Use the r-prefix (raw) for file paths under windows, instead of manual escape.
+Use the x.y.z (major, minor, build) scheme for versioning.
+Watch encoding, target UTF-8 as a default.
 """
 
 __author__ = 'Pat Smith'
@@ -61,7 +55,7 @@ __license__ = 'GPL - Put in ./LICENSE directory.'
 __version__ = '1.0.1'
 __maintainer__ = 'Pat Smith'
 __email__ = 'pat.smith@rando.org'
-__status__ = 'Production'
+__status__ = 'Development'
 
 import os.path
 import sys
@@ -79,19 +73,19 @@ class ExampleClass:
     """
     def __init__(self):
         """OneLine DocString."""
-        # =================================================================================================================\120
-        #  Section (major)
-        # =====================================================================================================================
+        # == Section (major) ========================================================================================= #
         self.hello_world = 'Hello World!'
-        # ---------------------------------------------------------------------------------------------------------------------
-        #  Section (minor)
-        # ---------------------------------------------------------------------------------------------------------------------
-        self.cwd = os.path.getctime(r'C:\Windows\system32.dll')
+        # -- Section (minor) ----------------------------------------------------------------------------------------- #
+        self.cwd = os.path.getctime(r'C:/Windows/system32.dll')
 
     def print_hello(self):
         """OneLine DocString."""
         print(self.hello_world)
-
+    
+    def main(self):
+        """OneLine DocString."""
+        self.print_hello()
+        
     @staticmethod
     def exit():
         print('Good bye!')
@@ -99,10 +93,7 @@ class ExampleClass:
 
 
 if __name__ == '__main__':
-    # =================================================================================================================\120
-    #  Section (major)
-    # =====================================================================================================================
     example = ExampleClass()  # inline comments, placed after two spaces, are not real sentences (just hints)
-    example.print_hello()  # Todo: This should be a real sentence, since it is a work instruction!
+    example.main()  # Todo: This should be a real sentence, since it is a work instruction!
 
     ExampleClass.exit()
