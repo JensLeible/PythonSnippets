@@ -31,20 +31,19 @@ At indentation steps extra linebreaks are omitted.
 Avoid any complexity at "if __name__ == '__main__':".
 Avoid other styles like "import <lib>".
 Default shebang is #!/usr/bin/env python.
+Don't hack. Design.
 Follow the code style of the given project - if it's worth it.
 If explicit is too ugly, implicit is better.
 If flat is too ugly, nested is better.
 Line wrapping after 120 columns.
-Name your files *.py independent of your os-environment.
+Name your files like lower_case.py.
 Put a class specific main() - if appropriate.
 Use braces at ('').join(list).
 Use forward slashes for file paths.
-Use linebreaks only for major logical or complex blocks.
-Use os.linesep if appropriate.
-Use regex, if appropriate, instead of stacked (e.g.) replace or strip.
 Use single quotes by default.
 Use the r-prefix (raw) for file paths under windows, instead of manual escape.
 Use the x.y.z (major, minor, build) scheme for versioning.
+Use, but don't overuse, regex, os.linesep and f-strings.
 Watch encoding, target UTF-8 as a default.
 """
 
