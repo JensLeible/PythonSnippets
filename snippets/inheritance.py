@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 class AddNumber():
-
     def __init__(self, number):
         self.number = number
 
@@ -13,7 +12,6 @@ class AddNumber():
 
 
 class AddString(object):
-
     def __init__(self, string):
         self.number = object.__init__(self)
         self.string = string
@@ -23,7 +21,6 @@ class AddString(object):
 
 
 if __name__ == '__main__':
-
     add_string = AddString(30)
     add_string.add_number()
     # add_string.print_random()
