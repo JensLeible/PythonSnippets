@@ -1,6 +1,6 @@
 # PythonSnippets
 Python 3.6≥
 
-References:
-https://docs.python-guide.org/writing/structure/
-https://github.com/kennethreitz/samplemod
+References:<br>
+https://docs.python-guide.org/writing/structure/<br>
+https://github.com/kennethreitz/samplemod<br>
