@@ -1,0 +1,4 @@
+# read a file without newlines
+f = open('file.txt', 'r')
+feedback = f.read().splitlines()
+f.close()
