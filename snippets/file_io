@@ -1,4 +1,4 @@
-# read a file without newlines
+# get a list of lines without separator
 f = open('file.txt', 'r')
-feedback = f.read().splitlines()
+lines = f.read().splitlines()
 f.close()
