@@ -2,6 +2,6 @@
 #!/usr/bin/env python
 
 # get a list of lines without separator
-f = open('file.txt', 'r')
-lines = f.read().splitlines()
-f.close()
+textFile = open('file.txt', 'r')
+lines = textFile.read().splitlines()
+textFile.close()
